@@ -1,0 +1,49 @@
+{
+  "name": "adeux-teux-teux-deux",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apricot13/adeux-teux-teux-deux"
+  },
+  "exports": "./index.js",
+  "engines": {
+    "node": ">=16.17.0"
+  },
+  "version": "1.0.0",
+  "description": "Quick add to teux-deux",
+  "main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c rollup.config.js",
+    "start": "rollup -c rollup.config.js -w",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "files": [
+    "index.js",
+    "setup-session.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "teuxdeux",
+    "teux-deux"
+  ],
+  "author": "apricot",
+  "license": "ISC",
+  "dependencies": {
+    "alfred-notifier": "^0.2.3",
+    "alfy": "^1.0.0",
+    "dotenv": "^16.0.2",
+    "moment": "^2.29.4",
+    "puppeteer": "^17.1.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^14.0.0",
+    "rollup": "^2.79.0",
+    "rollup-plugin-sourcemaps": "^0.6.3"
+  }
+}
