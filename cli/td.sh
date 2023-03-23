@@ -10,10 +10,12 @@ if [ $# -ne 1 ]; then
 		exit 1
 fi
 
-taskText=$1
+if [ "$1" = "a" ]; then 
+    node cli/index.js $2
+else 
+    node "${BASH_SOURCE%/*}/setup-session.js"
+fi
 
-
-node cli/index.js $taskText
 
 # if [ ! -z "$taskText"  ]; then 
 #     echo "$taskText" >> "$DRAFTS_INBOX_LOCATION"/test.md
